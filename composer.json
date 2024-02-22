@@ -1,0 +1,25 @@
+{
+    "description": "Atom php framwrok for rest api",
+    "keywords": ["framework", "atom", "rest api"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "symfony/http-foundation": "^7.0",
+        "j4mie/idiorm": "^1.5"
+       
+    },
+    "autoload": {
+        "psr-4": {
+            "Atom\\": "app/",
+            "Atom\\Core\\": "atom/"
+        }
+       
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
