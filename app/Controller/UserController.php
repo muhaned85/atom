@@ -12,10 +12,12 @@ class UserController extends BaseController
     public $route_middleware = [];
     private $_service;
     public $events=[
-        'beforAction'=>[],
+        'beforAction'=>[
+
+        ],
         'AftterAction'=>[
-            'register'=>'NotifcationNewUser',
-            'postLogin'=>'loginTime',
+            'register'=>'NotifcationNewUser,send_sms',
+            'postLogin'=>'lastLogin',
         ],
     ];
     public function __construct(UserService $service)
