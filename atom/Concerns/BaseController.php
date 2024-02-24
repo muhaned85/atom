@@ -9,8 +9,8 @@ use Actions;
 
 public $middleware = [];
 public $events=[
-    'beforAction'=>[],
-    'aftterAction'=>[],
+    'BeforAction'=>[],
+    'AftterAction'=>[],
 ];
 public $route_middleware = [];
 private $_rules = [];

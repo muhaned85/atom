@@ -1,7 +1,8 @@
 <?php
  
 namespace  Atom\Controller;
- 
+
+use Atom\Core\Concerns\BaseController;
 
 class Defualt extends BaseController
 {

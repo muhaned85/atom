@@ -13,9 +13,11 @@ class Token
    {
 
       $token = $this->bearerToken($request);;
-
-      /* $response = new JsonResponse(['status'=>'Error','msg'=>'invalid token']);
-        return  $response ;*/
+      if (empty($token) || $token !="kgklmelknlkevlkevlkerlkr" )
+      {
+        $response = new JsonResponse(['status'=>'Error','msg'=>'invalid token']);
+        return  $response ; 
+      }
       return  $next($request);
    }
 

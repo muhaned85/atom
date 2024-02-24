@@ -8,9 +8,16 @@ use Atom\Model\UserModel;
 
 class UserController extends BaseController
 {
-    public $middleware = [];
+    public $middleware = ['token'];
     public $route_middleware = [];
     private $_service;
+    public $events=[
+        'beforAction'=>[],
+        'AftterAction'=>[
+            'register'=>'NotifcationNewUser',
+            'postLogin'=>'loginTime',
+        ],
+    ];
     public function __construct(UserService $service)
     {
         $this->_service = $service;
